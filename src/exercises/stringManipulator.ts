@@ -1,5 +1,5 @@
 // Korjaa funktiot jotta testit menevät läpi.
-// Joudut myös korjaamaan kaikki any tyypitykset sekä parametrien nimeämisen.
+// Joudut myös korjaamaan kaikki any tyypitykset.
 
 // any type on nimensä mukaan tyyppi joka voi olla mitä vain, se ei kuitenkaan ole hyvän ohjelmointitavan mukaista.
 // any type rikkoo TypeScriptin perusideaa, joten sitä tulee välttää, niin kauan kun mahdollista.
