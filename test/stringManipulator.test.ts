@@ -1,6 +1,3 @@
-/* eslint-disable import/no-unresolved */
-/* eslint-disable import/extensions */
-
 import { expect } from 'chai';
 import 'mocha';
 import * as stringManipulator from '../src/exercises/stringManipulator';

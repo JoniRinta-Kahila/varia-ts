@@ -1,6 +1,3 @@
-/* eslint-disable import/no-unresolved */
-/* eslint-disable import/extensions */
-
 import { expect } from 'chai';
 import 'mocha';
 import * as collectionManipulator from '../src/exercises/collectionManipulator';
