@@ -1,4 +1,4 @@
-# ts-node-boilerplate
+# varia-ts
 
 TypeScript on JavaScriptiin perustuva ohjelmointikieli. TypeScriptin ja JavaScriptin suurin ero on TypeScriptin vahva tyypitys, josta kielen nimikin tulee.
 
