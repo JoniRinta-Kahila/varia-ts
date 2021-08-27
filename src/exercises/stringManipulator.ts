@@ -1,8 +1,8 @@
-// Korjaa funktiot jotta testit menevät läpi
-// joudut myös korjaamaan kaikki any tyypitykset
+// Korjaa funktiot jotta testit menevät läpi.
+// Joudut myös korjaamaan kaikki any tyypitykset sekä parametrien nimeämisen.
 
-// any type tarkoittaa nimensä mukaan että tyyppi voi olla mitä vain, se ei kuitenkaan ole hyvän ohjelmointitavan mukaista.
-// any type syö vie TypeScriptin perusidean joten sitä tulee välttää, niin kauan kun mahdollista.
+// any type on nimensä mukaan tyyppi joka voi olla mitä vain, se ei kuitenkaan ole hyvän ohjelmointitavan mukaista.
+// any type rikkoo TypeScriptin perusideaa, joten sitä tulee välttää, niin kauan kun mahdollista.
 
 // aja testit consolilla komennolla 'npm run test'
 
@@ -16,16 +16,16 @@ export const sayHello = (name: string): string => {
   return result;
 };
 
-export const scoreAsPostfix = (a: any, b: any): any => {};
+export const scoreAsPostfix = (score: any, name: any): any => {};
 
-export const scoreAsPrefix = (a: any, b: any): any => {};
+export const scoreAsPrefix = (score: any, name: any): any => {};
 
-export const inLowerCase = (a: any, b: any): any => {};
+export const inLowerCase = (score: any, name: any): any => {};
 
-export const noWhitespace = (a: any, b: any): any => {};
+export const noWhitespace = (score: any, name: any): any => {};
 
-export const backwards = (a: any): any => {};
+export const backwards = (name: any): any => {};
 
-export const toArray = (a: any): any => {};
+export const toArray = (name: any): any => {};
 
-export const toMap = (a: any): any => {};
+export const toMap = (name: any): any => {};

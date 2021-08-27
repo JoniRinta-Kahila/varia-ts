@@ -6,7 +6,7 @@ import 'mocha';
 import * as stringManipulator from '../src/exercises/stringManipulator';
 
 describe('stringManipulator tests:', () => {
-  it('Score as postfix, case 1', () => {
+  it('Score as postfix, case 1', (done) => {
     const name = 'John Doe';
     const score = 1200;
 
@@ -14,9 +14,10 @@ describe('stringManipulator tests:', () => {
     const result: string = stringManipulator.scoreAsPostfix(score, name);
 
     expect(result).to.equal(expected);
+    done();
   });
 
-  it('Score as postfix, case 2', () => {
+  it('Score as postfix, case 2', (done) => {
     const name = 'Jane Doe';
     const score = 1670;
 
@@ -24,9 +25,10 @@ describe('stringManipulator tests:', () => {
     const result: string = stringManipulator.scoreAsPostfix(score, name);
 
     expect(result).to.equal(expected);
+    done();
   });
 
-  it('Score as prefix, case 1', () => {
+  it('Score as prefix, case 1', (done) => {
     const name = 'John Doe';
     const score = 1200;
 
@@ -34,9 +36,10 @@ describe('stringManipulator tests:', () => {
     const result: string = stringManipulator.scoreAsPrefix(score, name);
 
     expect(result).to.equal(expected);
+    done();
   });
 
-  it('Score as prefix, case 2', () => {
+  it('Score as prefix, case 2', (done) => {
     const name = 'Jane Doe';
     const score = 1100;
 
@@ -44,9 +47,10 @@ describe('stringManipulator tests:', () => {
     const result: string = stringManipulator.scoreAsPrefix(score, name);
 
     expect(result).to.equal(expected);
+    done();
   });
 
-  it('All in lowercase, case 1', () => {
+  it('All in lowercase, case 1', (done) => {
     const name = 'John Doe';
     const score = 1600;
 
@@ -54,9 +58,10 @@ describe('stringManipulator tests:', () => {
     const result: string = stringManipulator.inLowerCase(score, name);
 
     expect(result).to.equal(expected);
+    done();
   });
 
-  it('All in lowercase, case 2', () => {
+  it('All in lowercase, case 2', (done) => {
     const name = 'Jane Doe';
     const score = 1454;
 
@@ -64,9 +69,10 @@ describe('stringManipulator tests:', () => {
     const result: string = stringManipulator.inLowerCase(score, name);
 
     expect(result).to.equal(expected);
+    done();
   });
 
-  it('No whitespaces, case 1', () => {
+  it('No whitespaces, case 1', (done) => {
     const name = 'John Doe';
     const score = 1200;
 
@@ -74,9 +80,10 @@ describe('stringManipulator tests:', () => {
     const result: string = stringManipulator.noWhitespace(score, name);
 
     expect(result).to.equal(expected);
+    done();
   });
 
-  it('No whitespaces, case 2', () => {
+  it('No whitespaces, case 2', (done) => {
     const name = 'Jane Doe';
     const score = 1210;
 
@@ -84,27 +91,30 @@ describe('stringManipulator tests:', () => {
     const result: string = stringManipulator.noWhitespace(score, name);
 
     expect(result).to.equal(expected);
+    done();
   });
 
-  it('Backwards, case 1', () => {
+  it('Backwards, case 1', (done) => {
     const value = 'John Doe';
 
     const expected = 'eoDnhoJ';
 
     const result: string = stringManipulator.backwards(value);
     expect(result).to.equal(expected);
+    done();
   });
 
-  it('Backwards, case 2', () => {
+  it('Backwards, case 2', (done) => {
     const value = 'Jane Pupil';
 
     const expected = 'lipuPenaJ';
     const result: string = stringManipulator.backwards(value);
 
     expect(result).to.equal(expected);
+    done();
   });
 
-  it('To Array, case 1', () => {
+  it('To Array, case 1', (done) => {
     const value = 'John Doe';
 
     const expected = ['John', 'Doe'];
@@ -113,9 +123,10 @@ describe('stringManipulator tests:', () => {
     expect(result.length).to.equal(expected.length);
     expect(result[0]).to.equal(expected[0]);
     expect(result[1]).to.equal(expected[1]);
+    done();
   });
 
-  it('To Array, case 2', () => {
+  it('To Array, case 2', (done) => {
     const value = 'Jane Doe';
 
     const expected = ['Jane', 'Doe'];
@@ -124,9 +135,10 @@ describe('stringManipulator tests:', () => {
     expect(result.length).to.equal(expected.length);
     expect(result[0]).to.equal(expected[0]);
     expect(result[1]).to.equal(expected[1]);
+    done();
   });
 
-  it('To Map, case 1', () => {
+  it('To Map, case 1', (done) => {
     const value = 'John Doe';
 
     const expected = new Map();
@@ -134,9 +146,10 @@ describe('stringManipulator tests:', () => {
     const result: Map<string, string> = stringManipulator.toMap(value);
 
     expect(result.get('John')).to.equal(expected.get('John'));
+    done();
   });
 
-  it('To Map, case 2', () => {
+  it('To Map, case 2', (done) => {
     const value = 'Jane Doe';
 
     const expected = new Map();
@@ -144,5 +157,6 @@ describe('stringManipulator tests:', () => {
     const result: Map<string, string> = stringManipulator.toMap(value);
 
     expect(result.get('Jane')).to.equal(expected.get('Jane'));
+    done();
   });
 });

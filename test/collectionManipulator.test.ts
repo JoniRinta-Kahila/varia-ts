@@ -7,32 +7,35 @@ import * as collectionManipulator from '../src/exercises/collectionManipulator';
 import IPlayer from '../src/exercises/types/iPlayer';
 
 describe('collectionManipulator tests:', () => {
-  it('findOne(): happypath 1', () => {
+  it('findOne(): happypath 1', (done) => {
     const data = ['foo', 'bar', 'baz'];
     const expected = 'foo';
 
     const result = collectionManipulator.findOne(data, expected);
     expect(result).to.equal(expected);
+    done();
   });
 
-  it('findOne(): happy path 2', () => {
+  it('findOne(): happy path 2', (done) => {
     const data = ['foo', 'bar', 'baz'];
     const expected = 'bar';
 
     const result = collectionManipulator.findOne(data, expected);
     expect(result).to.equal(expected);
+    done();
   });
 
-  it('findOne(): not found returns an empty string', () => {
+  it('findOne(): not found returns an empty string', (done) => {
     const data = ['foo', 'bar', 'baz'];
     const parameter = 'foobar';
     const expected = '';
 
     const result = collectionManipulator.findOne(data, parameter);
     expect(result).to.equal(expected);
+    done();
   });
 
-  it('findAllByScore(): happy path 1', () => {
+  it('findAllByScore(): happy path 1', (done) => {
     const player1: IPlayer = {
       name: 'John Doe',
       score: 600,
@@ -57,9 +60,10 @@ describe('collectionManipulator tests:', () => {
       parameter
     );
     expect(result).to.equal(expected);
+    done();
   });
 
-  it('findAllByScore(): happy path 2', () => {
+  it('findAllByScore(): happy path 2', (done) => {
     const player1: IPlayer = {
       name: 'John Doe',
       score: 600,
@@ -85,9 +89,10 @@ describe('collectionManipulator tests:', () => {
     );
     // expect(result.length).to.equal(expected.length);
     expect(JSON.stringify(result)).to.equal(JSON.stringify(expected));
+    done();
   });
 
-  it('findAllByName(): happy path 1', () => {
+  it('findAllByName(): happy path 1', (done) => {
     const player1: IPlayer = {
       name: 'John Doe',
       score: 600,
@@ -113,9 +118,10 @@ describe('collectionManipulator tests:', () => {
     );
     // expect(result.length).to.equal(expected.length);
     expect(JSON.stringify(result)).to.equal(JSON.stringify(expected));
+    done();
   });
 
-  it('findAllByName(): happy path 2', () => {
+  it('findAllByName(): happy path 2', (done) => {
     const player1: IPlayer = {
       name: 'John Doe',
       score: 600,
@@ -141,5 +147,6 @@ describe('collectionManipulator tests:', () => {
     );
     expect(result.length).to.equal(expected.length);
     expect(result).to.equal([player2]);
+    done();
   });
 });
