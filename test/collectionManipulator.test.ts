@@ -142,8 +142,7 @@ describe('collectionManipulator tests:', () => {
       data,
       parameter
     );
-    expect(result.length).to.equal(expected.length);
-    expect(result).to.equal([player2]);
+    expect(JSON.stringify(result)).to.equal(JSON.stringify(expected));
     done();
   });
 });
